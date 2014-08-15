@@ -1,0 +1,10 @@
+.modal-header
+ h3.modal-title What do You want to download?
+.modal-body
+ ul
+  li(ng-repeat='opt in download_options')
+   a(ng-click='selected.opt=opt') {{opt}}
+ |Selected: <b>{{selected.opt}}</b>
+.modal-footer
+ button.btn.btn-primary(ng-click='ok()') OK
+ button.btn.btn-warning(ng-click='cancel()') Cancel

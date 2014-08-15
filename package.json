@@ -1,0 +1,19 @@
+{
+  "name": "BThemer",
+  "version": "0.0.1",
+  "description": "Bootstrap build theme roller",
+  "author": "Kiril Kartunov <kiri4a@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.8.6",
+    "gulp-jade": "~0.6.1",
+    "gulp-less": "~1.3.2",
+    "gulp-minify-css": "~0.3.7",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-concat": "~2.3.4",
+    "gulp-frep": "~0.1.3",
+    "gulp-uglify": "~0.3.1",
+    "gulp-webserver": "~0.6.0"
+  },
+  "dependencies": {}
+}

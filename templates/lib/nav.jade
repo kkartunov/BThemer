@@ -1,0 +1,44 @@
+tabset
+ tab
+  tab-heading
+   i.fa.fa-tasks
+  .panel.panel-default
+   .panel-body
+    .btn-toolbar(role='toolbar')
+     .btn-group
+      button.btn.btn-default(title='Undo last change', ng-click='undo()')
+       i.fa.fa-undo
+      button.btn.btn-default(title='Restore to initial variables', ng-click='restore()')
+       i.fa.fa-eraser
+      button.btn.btn-default(title='Store current state', ng-click='save()')
+       i.fa.fa-save
+      button.btn.btn-default(title='Load local data', ng-click='load_local()')
+       i.fa.fa-paperclip
+     .btn-group
+      button.btn.btn-default(title='Download regular build', ng-click='download()')
+       i.fa.fa-download
+      button.btn.btn-default(title='Make and download custom build', ng-click='custom_buid()')
+       i.fa.fa-wrench
+ tab(heading='Custom HTML')
+  .panel.panel-default
+   .panel-body
+    .input-group.input-group-sm
+     textarea#ifr_code
+     span.help-block Put your custom HTML code here and press <mark>Use</mark> to load it into the preview window.</br>Click <mark>Default</mark> to revert back to original preview content.
+    .btn-group.pull-right
+     button.btn.btn-primary(ng-click='loadCustomHTML()') Use
+     button.btn.btn-success(ng-click='restoreHTML()', ng-class="{'disabled': !isCustomHTML}")
+      i.fa.fa-undo
+      |  Default
+ tab(heading='Help')
+  .panel.panel-default
+   .panel-body
+    include help/help.tab.jade
+ tab(heading='About')
+  .panel.panel-default
+   .panel-body
+    include about.tab.jade
+script(type='text/ng-template' , id='dModal.html')
+ include modals/dModal.jade
+script(type='text/ng-template' , id='dModalCustom.html')
+ include modals/dModalCustom.jade

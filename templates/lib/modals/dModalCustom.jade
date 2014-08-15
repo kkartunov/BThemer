@@ -1,0 +1,28 @@
+.modal-header
+ h3.modal-title Chose which Less files to include in your custom Bootstrap build.
+.modal-body
+ .row
+  .col-md-4
+   h4 Common CSS
+   .checkbox(ng-repeat="file in less_files.common")
+    label
+     input(type='checkbox', ng-model="less_files.common[$index].add", ng-change='checkbox_click(less_files.common[$index])')
+     |{{file.desc}}
+  .col-md-4
+   h4 Components
+   .checkbox(ng-repeat="file in less_files.components")
+    label
+     input(type='checkbox', ng-model="less_files.components[$index].add", ng-change='checkbox_click(less_files.components[$index])')
+     |{{file.desc}}
+  .col-md-4
+   h4 JS Components
+   .checkbox(ng-repeat="file in less_files.js_components")
+    label
+     input(type='checkbox', ng-model="less_files.js_components[$index].add", ng-change='checkbox_click(less_files.js_components[$index])')
+     |{{file.desc}}
+.modal-footer
+ label
+  input(type='checkbox', ng-model='minify_build', ng-change='minify()')
+  |  Minify build
+ button.btn.btn-primary(ng-click='ok()') OK
+ button.btn.btn-warning(ng-click='cancel()') Cancel

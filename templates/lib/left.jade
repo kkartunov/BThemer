@@ -1,0 +1,15 @@
+.logo
+ span.bsign B
+ |Themer
+ span.version= pkg.version
+#less-vars(ng-controller="VarsUI")
+ accordion
+  accordion-group(ng-repeat="(group, vars) in LVARS")
+   accordion-heading
+    h4 {{group}}
+     span.badge.pull-right {{gCnt(vars)}}
+   ul.list-group
+    li.list-group-item(ng-repeat="(name, value) in vars")
+     .input-group.input-group-sm
+      span.input-group-addon(popover="{{ LVARS_HELP[group][name] }}", popover-title='{{name}}', popover-trigger='mouseenter', popover-placement='right') {{name}}
+      input.form-control(type='text', id='inp-'+'{{name}}', data-var='{{name}}', placeholder='{{name}}', ng-model="LVARS[group][name]", ng-keypress='apply_var_change($event)')

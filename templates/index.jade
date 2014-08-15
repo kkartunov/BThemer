@@ -1,0 +1,19 @@
+//- index.jade
+doctype html
+html
+  include ./lib/head.jade
+  body(ng-cloak)
+   #loader
+   #left.panel.panel-default
+    include ./lib/left.jade
+   #preview
+    #nav(ng-controller='NavUI')
+     .panel.panel-default(ng-show='isNav')
+      .panel-body
+       include ./lib/nav.jade
+     div#trigger
+      a.btn.btn-default.btn-lg(ng-click='toggleSide()')
+       i.fa(ng-class="{'fa-angle-double-left':!isSideHidden, 'fa-terminal':isSideHidden}")
+      a.btn.btn-default.btn-lg(ng-click='isNav=!isNav')
+       i.fa(ng-class="{'fa-bars':!isNav, 'fa-angle-double-up':isNav}")
+    iframe#view(sandbox='allow-same-origin allow-scripts')
