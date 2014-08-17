@@ -7,3 +7,5 @@ Made and maintained by <a href="https://github.com/ColorfullyMe" target="_blank"
 
 #### If you like it and use it support it!
 > It takes time to do it but saves time using it...
+
+<a href="//gittip.com/ColorfullyMe" target="_blank">Gittip</a>
