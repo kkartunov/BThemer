@@ -233,7 +233,13 @@ BSThemer.controller('VarsUI', [
                 applier();
         };
         
-        var applier = function(){
+        // Input onblur handler.
+        $scope.onBlur = function(){
+            applier('silent');
+        };
+
+        // The applier.
+        var applier = function(silent){
             // When something is actually changed. Otherwise preview already in sync.
             if( !ChangeSeq.isApplied() ){
                 LESS_parser(document.getElementById('raw_less').innerHTML+ChangeSeq.makeVarsFile()).then(
@@ -246,7 +252,7 @@ BSThemer.controller('VarsUI', [
                         ChangeSeq.undo();
                     }
                 );
-            }else
+            }else if(silent != 'silent')
                 notify('Nothing new to apply');
         };
 

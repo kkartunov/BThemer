@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>BSThemer :: The Bootstrap theme composer</title>
+    <title>BThemer :: The Bootstrap theme composer</title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="dist/style.css" rel="stylesheet" type="text/css" media="all">
@@ -6545,7 +6545,7 @@ address {
             <ul class="list-group">
               <li ng-repeat="(name, value) in vars" class="list-group-item">
                 <div class="input-group input-group-sm"><span popover="{{ LVARS_HELP[group][name] }}" popover-title="{{name}}" popover-trigger="mouseenter" popover-placement="right" class="input-group-addon">{{name}}</span>
-                  <input type="text" id="inp-{{name}}" data-var="{{name}}" placeholder="{{name}}" ng-model="LVARS[group][name]" ng-keypress="apply_var_change($event)" class="form-control">
+                  <input type="text" id="inp-{{name}}" data-var="{{name}}" placeholder="{{name}}" ng-model="LVARS[group][name]" ng-keypress="apply_var_change($event)" ng-blur="onBlur()" class="form-control">
                 </div>
               </li>
             </ul>
@@ -6595,6 +6595,7 @@ address {
                   <div class="panel-body">
                     <h4>Genral</h4>
                     <p>Interaction is simple. Just set the values you want and use some of the building ways to get the result. Error handling is there to help avoiding some common mistakes but should not be trusted blindly!</p>
+                    <p>For detailed Less help see the <a href="http://lesscss.org/functions" target="_blank">docs</a>.</p>
                     <h4>Shortcuts</h4>
                     <p><kbd>Shift</kbd> - all shortcuts need Shift to be held.</p>
                     <p><kbd>+ Enter</kbd> - apply varibles to preview.</p>

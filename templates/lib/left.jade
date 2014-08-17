@@ -12,4 +12,4 @@
     li.list-group-item(ng-repeat="(name, value) in vars")
      .input-group.input-group-sm
       span.input-group-addon(popover="{{ LVARS_HELP[group][name] }}", popover-title='{{name}}', popover-trigger='mouseenter', popover-placement='right') {{name}}
-      input.form-control(type='text', id='inp-'+'{{name}}', data-var='{{name}}', placeholder='{{name}}', ng-model="LVARS[group][name]", ng-keypress='apply_var_change($event)')
+      input.form-control(type='text', id='inp-'+'{{name}}', data-var='{{name}}', placeholder='{{name}}', ng-model="LVARS[group][name]", ng-keypress='apply_var_change($event)', ng-blur='onBlur()')
