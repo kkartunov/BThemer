@@ -1,4 +1,4 @@
-BThemer
+BThemer ![](https://david-dm.org/colorfullyme/bthemer.png)
 =====
 
 This app is made to ease the pain when creating custom Bootstrap builds. It does so by providing access to the Less variables in charge of the "look and feel" in a user friendly interface. Allows custom builds, minifies, compiles and etc.
